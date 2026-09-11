@@ -1,0 +1,35 @@
+﻿namespace ClasseAbstrata
+{
+    interface ISalvavel
+    {
+        void Salvar();
+    }
+
+    class Documento : ISalvavel
+    {
+        public void Salvar()
+        {
+            Console.WriteLine("SALVANDO O DOCUMENTO EM FORMATO .DOC");
+        }
+    }
+
+    class Foto : ISalvavel
+    {
+        public void Salvar()
+        {
+            Console.WriteLine("SALVANDO A FOTO EM FORMATO .JPG");
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Documento documento = new Documento();
+            Foto foto = new Foto();
+
+            documento.Salvar();
+            foto.Salvar();
+        }
+    }
+}
